@@ -1,0 +1,19 @@
+<div class="grupos-container">
+  <h1>📋 Distribución de Grupos</h1>
+  <p class="subtitle">Los 12 grupos del Mundial 2026</p>
+
+  <div class="grupos-grid-completo">
+    <div class="grupo-card" *ngFor="let grupo of grupos">
+      <div class="grupo-header">
+        <h2>Grupo {{ grupo.letra }}</h2>
+        <span class="grupo-numero">{{ grupo.equipos.length }} equipos</span>
+      </div>
+      <ul class="equipos-lista">
+        <li *ngFor="let equipo of grupo.equipos">
+          <img [src]="equipo.bandera" [alt]="equipo.nombre" class="flag-img-small" />
+          {{ equipo.nombre }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

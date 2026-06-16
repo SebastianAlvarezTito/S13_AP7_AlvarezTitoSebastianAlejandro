@@ -1,0 +1,38 @@
+<div class="partidos-container">
+  <h1>📅 Calendario de Partidos</h1>
+  <p class="subtitle">Fase de Grupos - Mundial 2026 (Hora Perú PET)</p>
+
+  <div class="jornada-tabs">
+    <button 
+      *ngFor="let j of jornadas" 
+      (click)="seleccionarJornada(j.numero)"
+      [class.active]="jornadaSeleccionada === j.numero"
+    >
+      Jornada {{ j.numero }}
+    </button>
+  </div>
+
+  <div class="partidos-lista">
+    <div class="partido-card" *ngFor="let partido of partidosFiltrados">
+      <div class="partido-fecha">
+        <span class="fecha">{{ partido.fecha }}</span>
+        <span class="hora">{{ partido.hora }}</span>
+      </div>
+      <div class="partido-info">
+        <div class="equipo-local">
+          <img [src]="partido.localBandera" [alt]="partido.local" class="flag-img-partido" />
+          <span class="nombre">{{ partido.local }}</span>
+        </div>
+        <div class="vs">VS</div>
+        <div class="equipo-visitante">
+          <img [src]="partido.visitanteBandera" [alt]="partido.visitante" class="flag-img-partido" />
+          <span class="nombre">{{ partido.visitante }}</span>
+        </div>
+      </div>
+      <div class="partido-sede">
+        <span>🏟️ {{ partido.sede }}</span>
+        <span class="grupo-tag">Grupo {{ partido.grupo }}</span>
+      </div>
+    </div>
+  </div>
+</div>

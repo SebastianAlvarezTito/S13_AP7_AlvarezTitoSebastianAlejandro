@@ -1,0 +1,172 @@
+.partidos-container {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.partidos-container h1 {
+  font-size: 36px;
+  color: #1a2a6c;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.partidos-container .subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* ===== JORNADA TABS ===== */
+.jornada-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.jornada-tabs button {
+  padding: 12px 35px;
+  border: none;
+  border-radius: 30px;
+  background: #e8ecf1;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.jornada-tabs button:hover {
+  background: #d0d7e0;
+}
+
+.jornada-tabs button.active {
+  background: #1a2a6c;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(26, 42, 108, 0.4);
+}
+
+/* ===== PARTIDOS ===== */
+.partidos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.partido-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 25px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+  border-left: 5px solid #ffd700;
+}
+
+.partido-card:hover {
+  transform: translateX(5px);
+}
+
+.partido-fecha {
+  min-width: 120px;
+}
+
+.partido-fecha .fecha {
+  display: block;
+  font-weight: 600;
+  color: #1a2a6c;
+  font-size: 14px;
+}
+
+.partido-fecha .hora {
+  display: block;
+  font-size: 13px;
+  color: #888;
+}
+
+.partido-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+}
+
+.equipo-local, .equipo-visitante {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== ESTILO PARA BANDERAS EN PARTIDOS ===== */
+.flag-img-partido {
+  width: 32px;
+  height: 22px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.equipo-local .nombre, .equipo-visitante .nombre {
+  font-weight: 600;
+  font-size: 16px;
+  color: #222;
+}
+
+.vs {
+  font-weight: 700;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.partido-sede {
+  text-align: right;
+  min-width: 180px;
+}
+
+.partido-sede span {
+  display: block;
+  font-size: 13px;
+  color: #555;
+}
+
+.partido-sede .grupo-tag {
+  font-size: 11px;
+  background: #f0f4f8;
+  padding: 2px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 3px;
+  color: #777;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .partido-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .partido-info {
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0;
+  }
+
+  .partido-fecha, .partido-sede {
+    min-width: unset;
+    text-align: center;
+  }
+
+  .jornada-tabs button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

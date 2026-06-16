@@ -1,0 +1,26 @@
+<div class="equipos-container">
+  <h1>🏆 Selecciones Participantes</h1>
+  <p class="subtitle">48 equipos divididos en 12 grupos</p>
+
+  <div class="grupos-tabs">
+    <button 
+      *ngFor="let grupo of grupos" 
+      (click)="seleccionarGrupo(grupo.letra)"
+      [class.active]="grupoSeleccionado === grupo.letra"
+    >
+      Grupo {{ grupo.letra }}
+    </button>
+  </div>
+
+  <div class="equipos-grid">
+    <div class="equipo-card" *ngFor="let equipo of equiposFiltrados">
+      <div class="bandera">
+        <img [src]="equipo.bandera" [alt]="equipo.nombre" class="flag-img" />
+      </div>
+      <div class="equipo-info">
+        <h3>{{ equipo.nombre }}</h3>
+        <span class="grupo-tag">Grupo {{ equipo.grupo }}</span>
+      </div>
+    </div>
+  </div>
+</div>

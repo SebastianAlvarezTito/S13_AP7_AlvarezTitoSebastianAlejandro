@@ -1,0 +1,25 @@
+<!-- MENÚ DE NAVEGACIÓN -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <span>⚽ Mundial 2026</span>
+    </div>
+    <ul class="nav-menu">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">🏠 Inicio</a></li>
+      <li><a routerLink="/equipos" routerLinkActive="active">🏆 Equipos</a></li>
+      <li><a routerLink="/grupos" routerLinkActive="active">📋 Grupos</a></li>
+      <li><a routerLink="/partidos" routerLinkActive="active">📅 Partidos</a></li>
+      <li><a routerLink="/contacto" routerLinkActive="active">📧 Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- CONTENEDOR DINÁMICO -->
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="footer">
+  <p>© 2026 Mundial de Fútbol - Todos los derechos reservados</p>
+</footer>
