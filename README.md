@@ -48,3 +48,103 @@ mundial-app/
 ├── angular.json
 ├── package.json
 └── README.md
+```
+
+---
+
+## 🗺️ Páginas y Funcionalidades
+
+### 🏠 Inicio
+- Banner principal con el nombre del proyecto
+- Descripción del Mundial 2026
+- Datos destacados (48 selecciones, 104 partidos, etc.)
+- Vista previa de los 12 grupos con banderas
+- Partidos imperdibles de la primera jornada
+- Llamada a la acción para navegar a otras páginas
+
+### 🏆 Equipos
+- Lista completa de las 48 selecciones
+- Filtro por grupo (A-L)
+- Banderas de cada país usando `flagcdn.com`
+
+### 📋 Grupos
+- Distribución de los 12 grupos del Mundial
+- 4 equipos por grupo con sus respectivas banderas
+- Diseño en grid responsive
+
+### 📅 Partidos
+- Calendario completo de la fase de grupos
+- Filtro por jornada (1, 2 y 3)
+- Fecha, hora, equipos y sede de cada partido
+- Horarios adaptados a la hora de Perú (PET)
+
+### 📧 Contacto
+- Información de contacto (teléfono, email, dirección)
+- Formulario de contacto funcional
+- Redes sociales
+
+---
+
+## 🛠️ Instalación y Ejecución
+
+### Requisitos previos
+
+- Node.js (v16 o superior)
+- Angular CLI (v16 o superior)
+
+### Pasos
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/tu-usuario/mundial-2026-app.git
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Ejecutar en modo desarrollo
+ng serve
+```
+
+Abre tu navegador en `http://localhost:4200`
+
+---
+
+## 🗺️ Configuración de Rutas
+
+```typescript
+const routes: Routes = [
+  { path: '',         component: HomeComponent },
+  { path: 'equipos',  component: EquiposComponent },
+  { path: 'grupos',   component: GruposComponent },
+  { path: 'partidos', component: PartidosComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: '**',       redirectTo: '' }
+];
+```
+
+---
+
+## 📸 Capturas de Pantalla
+
+| Página | Vista |
+|--------|-------|
+| 🏠 Inicio | Vista principal con banner y grupos |
+| 🏆 Equipos | Lista de 48 selecciones con filtros |
+| 📋 Grupos | Grid de los 12 grupos |
+| 📅 Partidos | Calendario por jornadas |
+| 📧 Contacto | Formulario y datos de contacto |
+
+---
+
+## 👨‍💻 Autor
+Sebastian Alejandro Alvarez Tito
+
+---
+
+Desarrollado como parte del **Reto Práctico S13 | AP7** del curso de Angular.
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de uso académico y está desarrollado con fines educativos.
